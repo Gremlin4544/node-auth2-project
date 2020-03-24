@@ -1,4 +1,4 @@
-// require('dotenv').config(); install dotenv after uncommenting
+require('dotenv').config(); 
 
 const server = require('./api/server.js');
 
