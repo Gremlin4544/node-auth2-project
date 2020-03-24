@@ -24,10 +24,11 @@ function checkDept(department) {
     if (
       req.decodedToken && 
       req.decodedToken.department && 
-      req.decodedToken.toLowerCase() === department 
+      req.decodedToken.toLowerCase() === department.toLowerCase() 
       ) {
         next();
     } else {
+      console.log(req.decodedToken.department.toLowerCase());
       res.status(403).json({ you: 'shall not pass'});
     }
   }; 

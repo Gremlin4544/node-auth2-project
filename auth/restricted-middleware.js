@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {
 
 
   if (authorization) {
-    jwt.verify(authorization, jwtSecret, (err, decodedToken) => {
+    jwt.verify(authorization, JWTKEY, (err, decodedToken) => {
       if (err) {
         res.status(401).json({ message: "Invalid Credentials" });
       } else {
